@@ -17,6 +17,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'gradle'
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
       - name: Test
         run: ./gradlew test
       - name: Build
